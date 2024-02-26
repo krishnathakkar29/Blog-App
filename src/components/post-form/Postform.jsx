@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Button, Input, RTE, Logo } from "../index";
+import { Button, Input, RTE, Select } from "../index";
 import appwriteService from "../../appwrite/config";
 import { useForm } from "react-hook-form";
 
@@ -94,12 +94,7 @@ function Postform({ post }) {
             });
           }}
         />
-        <RTE
-          label="Content :"
-          name="content"
-          control={control}
-          defaultValue={getValues("content")}
-        />
+        <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
       </div>
       <div className="w-1/3 px-2">
         <Input
